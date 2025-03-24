@@ -1,162 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python Practice Progress Tracker</title>
+  <title>Python Progress Tracker</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f4ff;
-      color: #333;
+      background: #f5f7fa;
+      font-family: 'Poppins', sans-serif;
       padding: 20px;
-      max-width: 900px;
-      margin: auto;
+      color: #333;
     }
-
     h1 {
       text-align: center;
-      color: #4a4aff;
-      margin-bottom: 20px;
+      color: #2e86de;
     }
 
-    .section {
-      background: #fff;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .box {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .box h2 {
+      background-color: #4a69bd;
+      color: #fff;
+      padding: 10px;
       border-radius: 10px;
-      padding: 15px 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
     }
 
-    .section h2 {
-      color: #4a4aff;
-      margin-bottom: 10px;
+    .progress-container {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      width: 120px;
+      height: 120px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    label {
-      display: block;
-      margin-bottom: 10px;
-      cursor: pointer;
+    .progress-circle {
+      background: conic-gradient(#38ada9 0%, #38ada9 var(--progress), #ccc var(--progress));
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s ease;
     }
 
-    input[type="checkbox"] {
-      margin-right: 10px;
+    .progress-circle span {
+      font-weight: bold;
+      color: #2e86de;
     }
 
     button {
-      background-color: #4a4aff;
-      color: white;
       padding: 10px 20px;
+      background: #38ada9;
       border: none;
-      border-radius: 5px;
+      color: #fff;
+      border-radius: 10px;
       cursor: pointer;
-      margin: 10px 0;
+      font-weight: bold;
+      margin: 20px auto;
+      display: block;
+      transition: background 0.3s;
     }
 
     button:hover {
-      background-color: #3333cc;
+      background: #079992;
     }
   </style>
 </head>
-
 <body>
-  <h1>Python Practice Progress Tracker</h1>
 
-  <div class="section" id="functions">
+<h1>Python Progress Tracker</h1>
+<div class="container" id="tracker">
+  <div class="box">
     <h2>1. Functions Practice</h2>
-    <label><input type="checkbox">is_prime(n)</label>
-    <label><input type="checkbox">fibonacci(n)</label>
-    <label><input type="checkbox">factorial_recursive(n)</label>
-    <label><input type="checkbox">factorial_iterative(n)</label>
-    <label><input type="checkbox">sum_of_digits(n)</label>
-    <label><input type="checkbox">count_digits(n)</label>
-    <label><input type="checkbox">check_armstrong(n)</label>
-    <label><input type="checkbox">check_perfect_number(n)</label>
-    <label><input type="checkbox">gcd_of_two_numbers(a, b)</label>
+    <input type="checkbox"> is_prime(n)<br>
+    <input type="checkbox"> fibonacci(n)<br>
+    <input type="checkbox"> factorial_recursive(n)<br>
+    <input type="checkbox"> factorial_iterative(n)<br>
+    <input type="checkbox"> sum_of_digits(n)<br>
+    <input type="checkbox"> count_digits(n)<br>
+    <input type="checkbox"> check_armstrong(n)<br>
+    <input type="checkbox"> check_perfect_number(n)<br>
+    <input type="checkbox"> gcd_of_two_numbers(a, b)
   </div>
 
-  <div class="section" id="string">
+  <div class="box">
     <h2>2. String Manipulation</h2>
-    <label><input type="checkbox">reverse_string(s)</label>
-    <label><input type="checkbox">check_palindrome(s)</label>
-    <label><input type="checkbox">count_vowels(s)</label>
-    <label><input type="checkbox">count_consonants(s)</label>
-    <label><input type="checkbox">find_longest_word(sentence)</label>
-    <label><input type="checkbox">remove_spaces(s)</label>
-    <label><input type="checkbox">string_to_upper_lower(s)</label>
+    <input type="checkbox"> reverse_string(s)<br>
+    <input type="checkbox"> check_palindrome(s)<br>
+    <input type="checkbox"> count_vowels(s)<br>
+    <input type="checkbox"> count_consonants(s)<br>
+    <input type="checkbox"> find_longest_word(sentence)<br>
+    <input type="checkbox"> remove_spaces(s)<br>
+    <input type="checkbox"> string_to_upper_lower(s)
   </div>
 
-  <div class="section" id="list">
+  <div class="box">
     <h2>3. List Operations</h2>
-    <label><input type="checkbox">sum_of_list(lst)</label>
-    <label><input type="checkbox">find_max_min(lst)</label>
-    <label><input type="checkbox">reverse_list(lst)</label>
-    <label><input type="checkbox">even_odd_split(lst)</label>
-    <label><input type="checkbox">list_comprehension tasks</label>
-    <label><input type="checkbox">remove_duplicates(lst)</label>
+    <input type="checkbox"> sum_of_list(lst)<br>
+    <input type="checkbox"> find_max_min(lst)<br>
+    <input type="checkbox"> reverse_list(lst)<br>
+    <input type="checkbox"> even_odd_split(lst)<br>
+    <input type="checkbox"> list_comprehension tasks<br>
+    <input type="checkbox"> remove_duplicates(lst)
   </div>
 
-  <div class="section" id="dict">
+  <div class="box">
     <h2>4. Dictionary Practice</h2>
-    <label><input type="checkbox">word_frequency(sentence)</label>
-    <label><input type="checkbox">merge_two_dicts(d1, d2)</label>
-    <label><input type="checkbox">access_values(d)</label>
-    <label><input type="checkbox">dictionary_comprehension</label>
+    <input type="checkbox"> word_frequency(sentence)<br>
+    <input type="checkbox"> merge_two_dicts(d1, d2)<br>
+    <input type="checkbox"> access_values(d)<br>
+    <input type="checkbox"> dictionary_comprehension
   </div>
 
-  <div class="section" id="random">
+  <div class="box">
     <h2>5. Random Module Practice</h2>
-    <label><input type="checkbox">number_guess_game()</label>
-    <label><input type="checkbox">random_password_generator()</label>
-    <label><input type="checkbox">roll_a_die_simulation()</label>
+    <input type="checkbox"> number_guess_game()<br>
+    <input type="checkbox"> random_password_generator()<br>
+    <input type="checkbox"> roll_a_die_simulation()
   </div>
 
-  <div class="section" id="file">
+  <div class="box">
     <h2>6. File Handling Practice</h2>
-    <label><input type="checkbox">count_lines_words_chars(filename)</label>
-    <label><input type="checkbox">write_multiplication_table(filename)</label>
-    <label><input type="checkbox">read_csv_calculate_avg(filename)</label>
+    <input type="checkbox"> count_lines_words_chars(filename)<br>
+    <input type="checkbox"> write_multiplication_table(filename)<br>
+    <input type="checkbox"> read_csv_calculate_avg(filename)
   </div>
 
-  <div class="section" id="problems">
+  <div class="box">
     <h2>7. Practice Problem Sets</h2>
-    <label><input type="checkbox">basic_calculator()</label>
-    <label><input type="checkbox">user_input_logger()</label>
-    <label><input type="checkbox">find_common_elements_in_lists()</label>
-    <label><input type="checkbox">mini_text_analyzer(file)</label>
+    <input type="checkbox"> basic_calculator()<br>
+    <input type="checkbox"> user_input_logger()<br>
+    <input type="checkbox"> find_common_elements_in_lists()<br>
+    <input type="checkbox"> mini_text_analyzer(file)
   </div>
+</div>
 
-  <button onclick="saveProgress()">✅ Save Progress</button>
-  <button onclick="resetProgress()">❌ Reset</button>
+<div class="progress-container">
+  <div class="progress-circle" id="progressCircle" style="--progress: 0%">
+    <span id="progressPercent">0%</span>
+  </div>
+</div>
 
-  <script>
-    // Load saved progress from localStorage
-    window.onload = function () {
-      let saved = JSON.parse(localStorage.getItem('progress'));
-      if (saved) {
-        document.querySelectorAll('input[type=checkbox]').forEach((cb, index) => {
-          cb.checked = saved[index];
-        });
-      }
-    };
+<button onclick="saveProgress()">Save Progress</button>
 
-    // Save progress to localStorage
-    function saveProgress() {
-      let checkboxes = document.querySelectorAll('input[type=checkbox]');
-      let progress = [];
-      checkboxes.forEach(cb => progress.push(cb.checked));
-      localStorage.setItem('progress', JSON.stringify(progress));
-      alert("✅ Progress Saved!");
-    }
+<script>
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const progressCircle = document.getElementById('progressCircle');
+const progressPercent = document.getElementById('progressPercent');
 
-    // Reset progress
-    function resetProgress() {
-      document.querySelectorAll('input[type=checkbox]').forEach(cb => cb.checked = false);
-      localStorage.removeItem('progress');
-      alert("❌ Progress Reset!");
-    }
-  </script>
+// Load progress from localStorage
+window.onload = function() {
+  const saved = JSON.parse(localStorage.getItem('progress'));
+  if (saved) {
+    checkboxes.forEach((box, index) => {
+      box.checked = saved[index];
+    });
+    updateProgress();
+  }
+};
+
+checkboxes.forEach(cb => cb.addEventListener('change', updateProgress));
+
+function updateProgress() {
+  const total = checkboxes.length;
+  const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
+  const percent = Math.round((completed / total) * 100);
+
+  progressCircle.style.setProperty('--progress', percent + '%');
+  progressPercent.innerText = percent + '%';
+}
+
+function saveProgress() {
+  const progress = Array.from(checkboxes).map(cb => cb.checked);
+  localStorage.setItem('progress', JSON.stringify(progress));
+  alert('Progress Saved Successfully!');
+}
+</script>
+
 </body>
-
 </html>
