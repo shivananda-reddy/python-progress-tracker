@@ -1,62 +1,162 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Progress Tracker</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Practice Progress Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4ff;
+      color: #333;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a4aff;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      color: #4a4aff;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #4a4aff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    button:hover {
+      background-color: #3333cc;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>🐍 Python Practice Progress Tracker</h1>
-    <div class="container">
-        <div class="card">
-            <h2>1. Functions Practice</h2>
-            <ul>
-                <li><input type="checkbox"> is_prime(n)</li>
-                <li><input type="checkbox"> fibonacci(n)</li>
-                <li><input type="checkbox"> factorial_recursive(n)</li>
-                <li><input type="checkbox"> factorial_iterative(n)</li>
-                <li><input type="checkbox"> sum_of_digits(n)</li>
-                <li><input type="checkbox"> count_digits(n)</li>
-                <li><input type="checkbox"> check_armstrong(n)</li>
-                <li><input type="checkbox"> check_perfect_number(n)</li>
-                <li><input type="checkbox"> gcd_of_two_numbers(a, b)</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>2. String Manipulation</h2>
-            <ul>
-                <li><input type="checkbox"> reverse_string(s)</li>
-                <li><input type="checkbox"> check_palindrome(s)</li>
-                <li><input type="checkbox"> count_vowels(s)</li>
-                <li><input type="checkbox"> count_consonants(s)</li>
-                <li><input type="checkbox"> find_longest_word(sentence)</li>
-                <li><input type="checkbox"> remove_spaces(s)</li>
-                <li><input type="checkbox"> string_to_upper_lower(s)</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>3. List Operations</h2>
-            <ul>
-                <li><input type="checkbox"> sum_of_list(lst)</li>
-                <li><input type="checkbox"> find_max_min(lst)</li>
-                <li><input type="checkbox"> reverse_list(lst)</li>
-                <li><input type="checkbox"> even_odd_split(lst)</li>
-                <li><input type="checkbox"> list_comprehension_tasks</li>
-                <li><input type="checkbox"> remove_duplicates(lst)</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>4. Dictionary Practice</h2>
-            <ul>
-                <li><input type="checkbox"> word_frequency(sentence)</li>
-                <li><input type="checkbox"> merge_two_dicts(d1, d2)</li>
-                <li><input type="checkbox"> access_values(d)</li>
-                <li><input type="checkbox"> dictionary_comprehension</li>
-            </ul>
-        </div>
-    </div>
-    <p class="footer">“The journey of a thousand miles begins with a single step.” — Lao Tzu</p>
+  <h1>Python Practice Progress Tracker</h1>
+
+  <div class="section" id="functions">
+    <h2>1. Functions Practice</h2>
+    <label><input type="checkbox">is_prime(n)</label>
+    <label><input type="checkbox">fibonacci(n)</label>
+    <label><input type="checkbox">factorial_recursive(n)</label>
+    <label><input type="checkbox">factorial_iterative(n)</label>
+    <label><input type="checkbox">sum_of_digits(n)</label>
+    <label><input type="checkbox">count_digits(n)</label>
+    <label><input type="checkbox">check_armstrong(n)</label>
+    <label><input type="checkbox">check_perfect_number(n)</label>
+    <label><input type="checkbox">gcd_of_two_numbers(a, b)</label>
+  </div>
+
+  <div class="section" id="string">
+    <h2>2. String Manipulation</h2>
+    <label><input type="checkbox">reverse_string(s)</label>
+    <label><input type="checkbox">check_palindrome(s)</label>
+    <label><input type="checkbox">count_vowels(s)</label>
+    <label><input type="checkbox">count_consonants(s)</label>
+    <label><input type="checkbox">find_longest_word(sentence)</label>
+    <label><input type="checkbox">remove_spaces(s)</label>
+    <label><input type="checkbox">string_to_upper_lower(s)</label>
+  </div>
+
+  <div class="section" id="list">
+    <h2>3. List Operations</h2>
+    <label><input type="checkbox">sum_of_list(lst)</label>
+    <label><input type="checkbox">find_max_min(lst)</label>
+    <label><input type="checkbox">reverse_list(lst)</label>
+    <label><input type="checkbox">even_odd_split(lst)</label>
+    <label><input type="checkbox">list_comprehension tasks</label>
+    <label><input type="checkbox">remove_duplicates(lst)</label>
+  </div>
+
+  <div class="section" id="dict">
+    <h2>4. Dictionary Practice</h2>
+    <label><input type="checkbox">word_frequency(sentence)</label>
+    <label><input type="checkbox">merge_two_dicts(d1, d2)</label>
+    <label><input type="checkbox">access_values(d)</label>
+    <label><input type="checkbox">dictionary_comprehension</label>
+  </div>
+
+  <div class="section" id="random">
+    <h2>5. Random Module Practice</h2>
+    <label><input type="checkbox">number_guess_game()</label>
+    <label><input type="checkbox">random_password_generator()</label>
+    <label><input type="checkbox">roll_a_die_simulation()</label>
+  </div>
+
+  <div class="section" id="file">
+    <h2>6. File Handling Practice</h2>
+    <label><input type="checkbox">count_lines_words_chars(filename)</label>
+    <label><input type="checkbox">write_multiplication_table(filename)</label>
+    <label><input type="checkbox">read_csv_calculate_avg(filename)</label>
+  </div>
+
+  <div class="section" id="problems">
+    <h2>7. Practice Problem Sets</h2>
+    <label><input type="checkbox">basic_calculator()</label>
+    <label><input type="checkbox">user_input_logger()</label>
+    <label><input type="checkbox">find_common_elements_in_lists()</label>
+    <label><input type="checkbox">mini_text_analyzer(file)</label>
+  </div>
+
+  <button onclick="saveProgress()">✅ Save Progress</button>
+  <button onclick="resetProgress()">❌ Reset</button>
+
+  <script>
+    // Load saved progress from localStorage
+    window.onload = function () {
+      let saved = JSON.parse(localStorage.getItem('progress'));
+      if (saved) {
+        document.querySelectorAll('input[type=checkbox]').forEach((cb, index) => {
+          cb.checked = saved[index];
+        });
+      }
+    };
+
+    // Save progress to localStorage
+    function saveProgress() {
+      let checkboxes = document.querySelectorAll('input[type=checkbox]');
+      let progress = [];
+      checkboxes.forEach(cb => progress.push(cb.checked));
+      localStorage.setItem('progress', JSON.stringify(progress));
+      alert("✅ Progress Saved!");
+    }
+
+    // Reset progress
+    function resetProgress() {
+      document.querySelectorAll('input[type=checkbox]').forEach(cb => cb.checked = false);
+      localStorage.removeItem('progress');
+      alert("❌ Progress Reset!");
+    }
+  </script>
 </body>
+
 </html>
