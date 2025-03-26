@@ -11,7 +11,7 @@ It includes sections for functions, string manipulation, list operations, dictio
 - Deployed on GitHub Pages 🌐
 
 ## 🚀 Live Demo
-👉 [View the Progress Tracker](https://github.com/shivananda6579/python-progress-tracker/)  
+👉 [View the Progress Tracker](https://shivananda-reddy.github.io/python-progress-tracker/)  
 
 ## 📂 Project Structure
 
